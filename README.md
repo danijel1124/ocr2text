@@ -18,7 +18,17 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 - [Linux](##linux)
 
 ## Windows
+### using Chocolatey 
+1. Install Chocolatey, follow the instructions at https://chocolatey.org/install.
+2. Open command line and install  dependencies by
+Choco install Tesseract poppler
+3. Download [OCR2Text](https://github.com/writecrow/ocr2text/archive/master.zip)
+4. Unpack the project into a directory in which you usually save programs that do not require installation. For example, this could be an folder on the desktop.
+5. If not already open, open this folder and press shift+f10
+6. In the menu that opens, select either Open PowerShell window here or Open command prompt here.
+7. Run `pip install --user --requirement requirements.txt`
 
+### manualy
 1. Make a new folder on your Desktop called `ocr` (e.g., `C:\Users\mark\Desktop\ocr`)
 2. Download and install the Tesseract 4 OCR library from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
 2. The installation should indicate which directory Tesseract-OCR was installed. Most likely, this will either be `C:\Program Files (x86)\Tesseract-OCR` or `C:\Program Files\Tesseract-OCR`. **Move this folder into your equivalent of `C:\Users\mark\Desktop\ocr`, so that it is now located at `Desktop\ocr\Tesseract-OCR`.**
@@ -38,7 +48,6 @@ A survey of existing PDF-to-TXT solutions found no extant solutions that meet al
 16. Open a `cmd.exe` terminal, and navigate to the folder via the command line (e.g., `cd Desktop\ocr\ocr2text-master`)
 17. Run `pip install --user --requirement requirements.txt`
 18. Optionally, you can check that you set up the PATH variable correctly in steps 6-10 by typing `echo %PATH%`. The output must include your equivalent of `C:\Users\mark\Desktop\ocr\Tesseract-OCR` and `C:\Users\mark\Desktop\ocr\poppler-0.68.0_x86\poppler-0.68.0\bin` for the script to work.
-
 
 ## macOS
 1. Make a new folder on your Desktop called `ocr` (i.e., `/Users/mark/Desktop/ocr`)
